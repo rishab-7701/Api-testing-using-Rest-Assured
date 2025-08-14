@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Sprint 4 API Suite">
+    <listeners>
+        <listener class-name="utils.TestListener"/>
+    </listeners>
+
+    <test name="API Test Cases" thread-count="5">
+        <classes>
+            <class name="tests.AuthTest"/>
+            <class name="tests.InvalidAuthTest"/>
+            <class name="tests.StudentRegistrationTest"/>
+            <class name="tests.ViewAllStudentsTest"/>
+        </classes>
+    </test>
+</suite>

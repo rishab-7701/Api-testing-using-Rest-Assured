@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Sprint 4 API Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utils.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="API Test Cases(failed)">
+    <classes>
+      <class name="tests.InvalidAuthTest">
+        <methods>
+          <include name="loginWithMissingUsernameField"/>
+          <include name="loginWithMissingPasswordField"/>
+        </methods>
+      </class> <!-- tests.InvalidAuthTest -->
+      <class name="tests.AuthTest">
+        <methods>
+          <include name="getAccessToken"/>
+        </methods>
+      </class> <!-- tests.AuthTest -->
+      <class name="tests.StudentRegistrationTest">
+        <methods>
+          <include name="registerStudentWithInvalidMobileNumber"/>
+          <include name="registerStudentWithInvalidEmail"/>
+          <include name="registerStudentWithMissingName"/>
+          <include name="registerStudentWithoutAuthHeader"/>
+          <include name="registerStudentWithNegativeBacklogs"/>
+          <include name="registerStudentWithHighCGPA"/>
+        </methods>
+      </class> <!-- tests.StudentRegistrationTest -->
+      <class name="tests.ViewAllStudentsTest">
+        <methods>
+          <include name="viewAllStudentsWithoutAuthHeader"/>
+          <include name="verifyStudentFields"/>
+          <include name="verifyStudentsHaveId"/>
+        </methods>
+      </class> <!-- tests.ViewAllStudentsTest -->
+    </classes>
+  </test> <!-- API Test Cases(failed) -->
+</suite> <!-- Failed suite [Sprint 4 API Suite] -->
